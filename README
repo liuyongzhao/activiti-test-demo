@@ -1,1 +1,11 @@
 This is a Maven project which can be used as template when creating a unit test for Activiti.
+用途：建立activiti的测试模板
+1、在activiti.cfg.xml中创建H2数据库
+2、在my-process.bpmn20.xml中设计工作流内容
+3、MyUnitTest中
+	@Rule创建ActivitiRule
+	@Deployment部署流程文件
+	.startProcessInstanceByKey启动流程
+	@Test 
+	assertNotNull断言流程实例非空
+	assertEquals断言名为Activiti is awesome的task存在
